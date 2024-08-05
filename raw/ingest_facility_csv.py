@@ -24,7 +24,7 @@ cursor = conn.cursor()
 # Create Table
 cursor.execute(
     """
-    CREATE TABLE IF NOT EXISTS demo.assisted_living_facility_list
+    CREATE TABLE IF NOT EXISTS landing.assisted_living_facility_list
     (
         facility_id serial PRIMARY KEY,
         Facility VARCHAR(200) NOT NULL,
@@ -57,7 +57,7 @@ cursor.execute(
 for row in df.itertuples():
     cursor.execute(
         """
-            INSERT INTO demo.assisted_living_facility_list (
+            INSERT INTO landing.assisted_living_facility_list (
                 facility,
                 city,
                 county,
